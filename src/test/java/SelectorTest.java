@@ -17,6 +17,12 @@ public class SelectorTest {
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
 
 
-        driver.findElement(By.id("clickOnMe")).click();
+        driver.findElement(By.id("clickOnMe"));
+
+        //by name
+
+        By firstName = By.name("fname");
+        WebElement firstNameInput = driver.findElement(firstName);
+        driver.findElement(By.name("fname"));
     }
 }
