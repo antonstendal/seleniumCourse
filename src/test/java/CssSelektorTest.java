@@ -48,9 +48,17 @@ public class CssSelektorTest {
 
         By firstFormAfterLabel = By.cssSelector("label + form");
         By allFormsAfterLabel = By.cssSelector("label ~ form");
-
         driver.findElements(firstFormAfterLabel);
         driver.findElements(allFormsAfterLabel);
 
+        By attrTag = By.cssSelector("input[name='fname']");
+        By attrContains = By.cssSelector("[name *='name']");
+        By attrStarts = By.cssSelector("[name^='f']");
+        By attrEnds = By.cssSelector("[name$='me']");
+
+        driver.findElements(attrTag);
+        driver.findElements(attrContains);
+        driver.findElements(attrStarts);
+        driver.findElements(attrEnds);
     }
 }
