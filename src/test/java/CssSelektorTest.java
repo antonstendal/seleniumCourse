@@ -28,5 +28,29 @@ public class CssSelektorTest {
 
         By cssNameValue = By.cssSelector("[class = 'topSecret']");
         driver.findElement(cssNameValue);
+
+        //find all elements Page
+        By all = By.cssSelector("*");
+        driver.findElements(all);
+
+        By ulInDiv = By.cssSelector("div ul");
+        By ulInTable = By.cssSelector("table tr");
+        By trInBody = By.cssSelector("tbody tr");
+
+        driver.findElements(ulInDiv);
+        driver.findElements(ulInTable);
+        driver.findElements(trInBody);
+
+        By firstChildULInDiv = By.cssSelector("div > ul");
+        By firstChildTrInTbody = By.cssSelector("tbody > tr");
+        driver.findElements(firstChildTrInTbody);
+        driver.findElements(firstChildULInDiv);
+
+        By firstFormAfterLabel = By.cssSelector("label + form");
+        By allFormsAfterLabel = By.cssSelector("label ~ form");
+
+        driver.findElements(firstFormAfterLabel);
+        driver.findElements(allFormsAfterLabel);
+
     }
 }
