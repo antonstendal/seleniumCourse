@@ -60,5 +60,13 @@ public class CssSelektorTest {
         driver.findElements(attrContains);
         driver.findElements(attrStarts);
         driver.findElements(attrEnds);
+
+        By firstChild = By.cssSelector("li:first-child");
+        By lastChild = By.cssSelector("li:last-child");
+        By thirdChild = By.cssSelector("li:nth-child(3)"); // start from 1, not 0
+
+        driver.findElements(firstChild);
+        driver.findElements(lastChild);
+        driver.findElements(thirdChild);
     }
 }
