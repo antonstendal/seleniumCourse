@@ -90,5 +90,14 @@ public class XpathTest {
         driver.findElements(preceding);
         driver.findElements(precedingSibling);
 
+
+        By divsAndLinks = By.xpath("//a | div");
+        By andOperator  = By.xpath("//input[@name='fname' and @id='fname']");
+        By orOperator  = By.xpath("//input[@name='fname' or @id='fna']");
+
+
+        driver.findElements(divsAndLinks);
+        driver.findElements(andOperator);
+        driver.findElements(orOperator);
     }
 }
