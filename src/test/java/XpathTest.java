@@ -71,7 +71,24 @@ public class XpathTest {
         driver.findElements(startWith);
         driver.findElements(endsWith);
 
+        By child = By.xpath("//div/child::ul");
+        By descendant = By.xpath("//div/descendant::ul");
+        By parent = By.xpath("//div/../..");
 
+        By ancestor = By.xpath("//div/descendant::ul");
+        By following = By.xpath("//img/following::*");
+        By followingSibling = By.xpath("//img/following-sibling::*");
+        By preceding = By.xpath("//img/preceding::*");
+        By precedingSibling = By.xpath("//img/preceding-sibling::*");
+
+        driver.findElements(child);
+        driver.findElements(descendant);
+        driver.findElements(parent);
+        driver.findElements(ancestor);
+        driver.findElements(following);
+        driver.findElements(followingSibling);
+        driver.findElements(preceding);
+        driver.findElements(precedingSibling);
 
     }
 }
