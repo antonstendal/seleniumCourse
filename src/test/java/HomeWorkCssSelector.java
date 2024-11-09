@@ -62,12 +62,5 @@ public class HomeWorkCssSelector {
         WebElement submit = driver.findElement(buttonSubmit);
         submit.click();
 
-        int n = 20;
-        String result = (n < 18 ) ? "Good day" : "Good Evening";
-
-        int code = 1111;
-        String res = (code == 1111) ? "Ok" : "Wrong";
-
-
     }
 }
