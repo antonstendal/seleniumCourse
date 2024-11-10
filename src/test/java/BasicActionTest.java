@@ -43,6 +43,10 @@ public class BasicActionTest {
         System.out.println(select.checkOption("Audi", selectCar));
         System.out.println(select.checkOption("Daewoo", selectCar));*/
 
+        WebElement para = driver.findElement(By.cssSelector(".topSecret"));
+        System.out.println("Text " + para.getAttribute("value"));
+        System.out.println("Text " + para.getAttribute("textContent"));
+
 
     }
 }
