@@ -1,15 +1,16 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Set;
 
 public class IframeTest {
 
     @Test
-    public void testNewWindow() {
+    public void testNewWindow() throws IOException {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/iframe.html");
