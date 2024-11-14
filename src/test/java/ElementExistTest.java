@@ -22,6 +22,10 @@ public class ElementExistTest {
         System.out.println(driver.findElement(By.tagName("p")).isDisplayed());
         System.out.println(driver.findElement(By.tagName("button")).isDisplayed());
 
+        System.out.println(driver.findElement(By.tagName("button")).isEnabled());
+
+
+
     }
 
     public boolean elementExist(By locator) {
@@ -31,11 +35,10 @@ public class ElementExistTest {
         } catch (NoSuchElementException exception) {
             return false;
         }
-
     }
 
     public boolean elementExistSecond(By locator) {
-            return driver.findElements(locator).size() > 0;
+        return driver.findElements(locator).size() > 0;
 
 
     }
