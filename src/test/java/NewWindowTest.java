@@ -13,7 +13,7 @@ public class NewWindowTest {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
-        driver.manage().window().maximize();
+
         
         String currentWindow = driver.getWindowHandle();
         System.out.println(currentWindow);
