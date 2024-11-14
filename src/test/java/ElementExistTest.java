@@ -15,15 +15,18 @@ public class ElementExistTest {
         driver.get("https://testeroprogramowania.github.io/selenium/basics.html");
         System.out.println(elementExist(By.tagName("p")));
         System.out.println(elementExist(By.id("topSecret")));
-
         System.out.println(elementExistSecond(By.tagName("p")));
         System.out.println(elementExistSecond(By.id("topSecret")));
-
         System.out.println(driver.findElement(By.tagName("p")).isDisplayed());
         System.out.println(driver.findElement(By.tagName("button")).isDisplayed());
-
         System.out.println(driver.findElement(By.tagName("button")).isEnabled());
 
+
+        System.out.println("===========================================================");
+        WebElement checkBox = driver.findElement(By.cssSelector("input[type='checkbox']"));
+        System.out.println(checkBox.isSelected());
+        checkBox.click();
+        System.out.println(checkBox.isSelected());
 
 
     }
