@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class ImageTest {
 
     WebDriver driver;
@@ -21,3 +23,4 @@ public class ImageTest {
         Assert.assertEquals(heightImage, "0");
     }
 }
+
